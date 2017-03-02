@@ -3,15 +3,13 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>contact</title>
-	<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Open+Sans:700|Raleway:400,600|Roboto" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contact</title>
+	<link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700%7COpen+Sans:400,700%7CRaleway:400,700%7CRoboto:400,700" rel="stylesheet">
 	<link rel="stylesheet" href="css/grid.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/nav_item.css">
-			<link rel="stylesheet" href="css/media.css">
-
-	
-
+	<link rel="stylesheet" href="css/media.css">
 </head>
 
 <body>
@@ -24,8 +22,8 @@
 					</div>
 					<nav class="nav_content">
 						<ul>
-							<li><a href="menu.html" >menu</a></li>
-							<li><a href="team.html" >our team</a></li>
+							<li><a href="menu.html">menu</a></li>
+							<li><a href="team.html">our team</a></li>
 							<li><a href="news_blog.html">news / blog</a></li>
 							<li><a href="contact.html">contact</a></li>
 						</ul>
@@ -34,10 +32,7 @@
 			</div>
 		</div>
 	</header>
-
-	
-	
-	<section class="contact" >
+	<section class="contact">
 		<div class="container">
 			<div class="row">
 				<div class="contact_content">
@@ -45,7 +40,7 @@
 						<h2 class="section_title">contact</h2>
 						<p class="descr_section">text us or send your impression</p>
 					</div>
-					
+
 					<div class="col-md-6">
 						<form action="#" id="contact_form">
 							<div class="input_text_wrap">
@@ -53,35 +48,33 @@
 								<input type="text" placeholder="Last Name">
 							</div>
 
-							<textarea placeholder="Comment"></textarea>	
+							<textarea placeholder="Comment"></textarea>
 							<input type="submit" value="send">
 						</form>
 					</div>
 					<div class="col-md-5 col-md-offset-1 ">
-					<div class="contact_right clearfix">
-						<img src="img/contact.jpg" class="clearfix" alt="alt contact img">
-						<div class="adress_wrap clearfix">
-							<h4 class="adress_title">LOCATION</h4>
-							<p>LITTLE LONSDALE ST, MELBOURNe VICTORIA 8011 AUSTRALIA</p>
-							<h4 class="adress_title">HOURS</h4>
-							<p class="work_hour">TUE - THU <br> 9:30AM - 21:30PM</p>
-							<p class="work_hour">FRI - SUN <br> 10:30AM - 23:30PM</p>
+						<div class="contact_right clearfix">
+							<img src="img/contact.jpg" class="clearfix" alt="alt contact img">
+							<div class="adress_wrap clearfix">
+								<h4 class="adress_title">LOCATION</h4>
+								<p>LITTLE LONSDALE ST, MELBOURNe VICTORIA 8011 AUSTRALIA</p>
+								<h4 class="adress_title">HOURS</h4>
+								<p class="work_hour">TUE - THU <br> 9:30AM - 21:30PM</p>
+								<p class="work_hour">FRI - SUN <br> 10:30AM - 23:30PM</p>
+							</div>
 						</div>
-					</div>		
-					</div>	
-				</div>	
-			</div>
-			<div class="map" id="map">
-				
+					</div>
+				</div>
 			</div>
 		</div>
-	</section>
-	
+		<div class="map" id="map">
 
+		</div>
+	</section>
 	<section class="footer_content">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-5">
+				<div class="col-md-5 col-sm-5">
 					<h3>ABOUT BON APETIT</h3>
 					<p>Bon Apetit is an enchanting and easy-to-use parallax Restaurant WordPress theme that allows you to tell your story in a dynamic, narrative and enjoyable way, making it perfect for restaurants, bakeries, bars or coffee shops.</p>
 					<h6>BE SOCIAL</h6>
@@ -89,8 +82,8 @@
 					<a href="https://twitter.com" target="_blank"><i class="icon_chef tw_icon"></i></a>
 					<a href="linkedin.com" target="_blank"><i class="icon_chef link_icon"></i></a>
 				</div>
-				<div class="col-md-offset-1 col-md-4">
-					<h3>Our newsletter</h3>
+				<div class="col-md-offset-1 col-md-4 col-sm-offset-1 col-sm-6">
+					<h3 id="newsletter">Our newsletter</h3>
 					<p>To receive the latest news from us please<br>subscribe to our newsletter.</p>
 					<form class="contact_form">
 						<input type="text" placeholder="enter your email here">
@@ -98,19 +91,15 @@
 					</form>
 					<h3>contact</h3>
 					<div class="contact">
-						<i class="contact_icon icon_phone"></i>
-						<p>+31 071 3123456</p>
-						<i class="contact_icon icon_mail"></i>
-						<p>info@bonapetit.com</p>
-						<i class="contact_icon icon_map"></i>
-						<p>New York City</p>
+						<p><i class="contact_icon icon_phone"></i>+31 071 3123456</p>
+						<p><i class="contact_icon icon_mail"></i>info@bonapetit.com</p>
+						<p><i class="contact_icon icon_map"></i>New York City</p>
 					</div>
 
 				</div>
 			</div>
 		</div>
 	</section>
-
 	<footer>
 		<div class="container">
 			<div class="row">
@@ -121,7 +110,27 @@
 			</div>
 		</div>
 	</footer>
+	<script>
+		function initMap() {
+			var myLatLng = {
+				lat: -37.8112577,
+				lng: 144.9619521
+			};
+			var map = new google.maps.Map(document.getElementById('map'), {
+				center: myLatLng,
+				scrollwheel: false,
+				zoom: 18
+			});
+
+			// Create a marker and set its position.
+			var marker = new google.maps.Marker({
+				map: map,
+				position: myLatLng
+			});
+		}
+	</script>
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxeW7HyQc_HPSRTnQUz7-sAbfu8d4foxI&callback=initMap" async defer></script>
 	<script src="script/main.js"></script>
 </body>
 
